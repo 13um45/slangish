@@ -1,17 +1,5 @@
 <h1>New Slang</h1>
 
-<%= form_for :slang, url: slangs_path do |f| %>
-<p>
-    <%= f.label :title %><br>
-	<%= f.text_field :title %>
-</p>
+<%= render 'form' %>
 
-<p>
-	<%= f.label :definition %><br>
-	<%= f.text_area :defintion %>
-</p>
-
-<p>
-	<%= f.submit %>
-</p>
-<% end %>
+<%= link_to 'back', slangs_path %>

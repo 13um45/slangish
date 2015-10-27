@@ -1,0 +1,22 @@
+<h1>Listing Slangs</h1>
+ 
+<table>
+  <tr>
+    <th>Word</th>
+    <th>Definition</th>
+  </tr>
+ 
+  <% @slangs.each do |slang| %>
+    <tr>
+      <td><%= slang.word %></td>
+      <td><%= slang.definition %></td>
+       <td><%= link_to 'Show', slang_path(slang) %></td>
+      <td><%= link_to 'Edit', edit_slang_path(slang) %></td>
+      <td><%= link_to 'Destroy', slang_path(slang),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'new', new_slang_path %>
