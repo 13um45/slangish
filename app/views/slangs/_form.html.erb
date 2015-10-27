@@ -15,16 +15,17 @@
   <% end %>
  
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :word %><br>
+    <%= f.text_field :word, class: "form-control" %>
   </p>
  
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :definition %><br>
+    <%= f.text_area :definition, class: "form-control", rows: 5 %>
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "Submit", class: "btn btn-default" %>
   </p>
  
+ <% end %>

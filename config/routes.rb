@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+  get 'pages/about'
   resources :slangs
 
+
   root 'welcome#index'
+
+  resources :slangs do
+  resources :comments
+end
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

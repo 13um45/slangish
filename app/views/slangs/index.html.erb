@@ -1,22 +1,18 @@
-<h1>Listing Slangs</h1>
- 
-<table>
-  <tr>
-    <th>Word</th>
-    <th>Definition</th>
-  </tr>
- 
+<div class="container">
   <% @slangs.each do |slang| %>
-    <tr>
-      <td><%= slang.word %></td>
-      <td><%= slang.definition %></td>
-       <td><%= link_to 'Show', slang_path(slang) %></td>
-      <td><%= link_to 'Edit', edit_slang_path(slang) %></td>
-      <td><%= link_to 'Destroy', slang_path(slang),
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 jumbotron"><h3><%= link_to slang.word, slang_path(slang) %></h3><br>
+      <%= slang.definition %><br>
+      <%= link_to 'Destroy', slang_path(slang),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+              data: { confirm: 'Are you sure?' } %>
+      </div>
+      </div>
   <% end %>
-</table>
-
-<%= link_to 'new', new_slang_path %>
+<div class="row">
+<div class="col-md-4 col-md-offset-2">
+<%= link_to 'New Slang Term', new_slang_path, class: "btn btn-lg btn-default" %>
+</div>
+</div>
+<br>
+</div>
