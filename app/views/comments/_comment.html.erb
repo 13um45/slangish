@@ -1,14 +1,14 @@
-<p>
+<p class="text-center">
   <strong>Commenter:</strong>
   <%= comment.commenter %>
 </p>
  
-<p>
-  <strong>Comment:</strong>
+<p class="text-center">
+  <strong>Comment:</strong><br>
   <%= comment.body %>
 </p>
 
-<p>
+<p class="text-center">
   <%= link_to 'Delete Comment', [comment.slang, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>

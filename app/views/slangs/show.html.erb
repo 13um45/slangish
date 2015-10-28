@@ -8,11 +8,11 @@
 </div>
 </div>
 <div class="row">
-<div class="col-md-4 col-md-offset-2">
-<p><strong>Comments:</strong></p>
+<div class="col-md-4 col-md-offset-4">
+<p class="text-center"><strong>Comments:</strong></p>
 <%= render @slang.comments %>
 
-<p><strong>Add a comment</strong></p>
+<p class="text-center"><strong>Add a comment</strong></p>
 <%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_slang_path(@slang), class: "btn btn-default" %> 

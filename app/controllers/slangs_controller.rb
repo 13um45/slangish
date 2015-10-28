@@ -1,9 +1,13 @@
 class SlangsController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show]
-
   def index
-    @slangs = Slang.all
+    @page = (params[:page] || 1).to_i
+    offset = (@page -1) * 8
+    @slangs = Slang.
+    order(word: :asc).
+    limit(8).
+    offset(offset).
+    all
   end
   
   def show
