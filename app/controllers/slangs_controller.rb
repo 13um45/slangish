@@ -53,7 +53,7 @@ end
 
   private
   def slang_params
-    params.require(:slang).permit(:word, :definition)
+    params.require(:slang).permit(:word, :definition, :example, :pronunciation)
   end
 end
 

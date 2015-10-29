@@ -9,7 +9,9 @@
   <% @slangs.each do |slang| %>
     <div class="row">
       <div class="col-md-8 col-md-offset-2 jumbotron"><h3><%= link_to slang.word, slang_path(slang) %></h3><br>
-      <%= slang.definition %><br>
+      <%= slang.pronunciation %><br><br>
+	<%= slang.definition %><br><br>
+	<em><%= slang.example %><em>
       </div>
       </div>
   <% end %>
