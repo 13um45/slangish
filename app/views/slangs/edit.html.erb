@@ -1,5 +1,13 @@
-<h1>Editing article</h1>
- 
+<div class="container">
+ <div class="row">
+ <div class="col-md-4 col-md-offset-4">
+<h1>Editing Slang</h1>
 <%= render 'form' %>
- 
-<%= link_to 'Back', slang_path %>
+
+<%= link_to 'Back', slang_path, class: "btn btn-default" %>
+<%= link_to 'Destroy', slang_path, class: "btn btn-default",
+           method: :delete,
+           data: { confirm: 'Are you sure?' } %> 
+</div>
+</div>
+</div>

@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+  before_filter :authorize
 def create
     @slang = Slang.find(params[:slang_id])
     @comment = @slang.comments.create(comment_params)

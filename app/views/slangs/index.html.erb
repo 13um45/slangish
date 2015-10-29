@@ -10,9 +10,6 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2 jumbotron"><h3><%= link_to slang.word, slang_path(slang) %></h3><br>
       <%= slang.definition %><br>
-      <%= link_to 'Destroy', slang_path(slang),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
       </div>
       </div>
   <% end %>

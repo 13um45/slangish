@@ -1,5 +1,7 @@
 class SlangsController < ApplicationController
 
+  before_filter :authorize, :except => [:index, :show]
+
   def index
     @page = (params[:page] || 1).to_i
     offset = (@page -1) * 8

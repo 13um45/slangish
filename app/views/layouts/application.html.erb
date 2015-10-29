@@ -23,9 +23,18 @@
         <li class="active"><a href="<%= slangs_path %>">Home</a></li>
         <li><a href="/pages/about">About</a></li>
       </ul>
+       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+        <li><a href="<%='/logout'%>">Logout</a></li>
+        <% else %>
+         <li><a href="<%='/signup'%>">Sign Up</a></li>
+        <li><a href="<%='/login'%>"> Login</a></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </nav>
+
 
 <%= yield %>
 
